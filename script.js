@@ -1,17 +1,37 @@
-// forEach isn't returning something in javaScript but map method is returning/generating new array.
-const fruits = ["banana", "apple", "peach", "mango", "grapes"];
+// filter, map, reduce, forEach
 
-console.log("Using ForEach Method.");
+let arr = [1, 2, 3];
+// 6
 
-const value = fruits.forEach((val, i, arr) => {
-  let firstLetter = val[0].toUpperCase();
-  let remainLetter = val.slice(1);
-  console.log(i + 1, firstLetter + remainLetter);
-  console.log(arr);
-  return firstLetter + remainLetter;
+// using reduce method.
+const sum = arr.reduce((acc, curr) => {
+  return acc + curr;
+}, 1);
+
+console.log(sum);
+
+// using filter method
+const twoDivisible = arr.filter((val) => {
+  return val % 2 == 0;
 });
 
-console.log(value);
+console.log(twoDivisible);
 
-let trimValue = "\n \n \nUsing Map Method.";
-console.log(trimValue);
+// using map method
+const mapMethod = arr.map((val) => {
+  return val / 2;
+});
+
+console.log(mapMethod);
+
+// using forEach method.
+//let arr = [1, 2, 3];
+arr.forEach((val) => {
+  console.log(val + 1);
+});
+
+// includes method => checks is includes value in the array.
+
+let nums = [1, 2, 3, 4, 5, 10, 23];
+let isResultAvailable = nums.includes(4);
+console.log(isResultAvailable);
