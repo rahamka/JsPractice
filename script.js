@@ -1,12 +1,10 @@
-const evenNumbers = [0, 2, 4, 6, 8, 10];
+// What are Arguments in JavaScript?
+function argumentsFun(a, b, c, d, e, f) {
+  let sum = 0;
+  for (let i = 0; i < arguments.length; i++) {
+    sum = sum + arguments[i];
+  }
+  return sum;
+}
 
-const someMethod = evenNumbers.some((val) => {
-  return val > 4;
-});
-
-const finalValue = evenNumbers.every((val, i) => {
-  return val % 2 !== 0;
-});
-
-console.log(finalValue);
-console.log(someMethod);
+console.log(argumentsFun(2, 3, 4, 3, 9, 1));
