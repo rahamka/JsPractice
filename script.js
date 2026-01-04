@@ -1,26 +1,36 @@
-// Default Parameters in JavaScript.
-// how to Default Parameter in JavaScript to any Parameter of function.
-function multiply(a, b = 1) {
-  return a * b; // 6 * 1 // NaN => Not a Number.
+// Spread Operator/Shallow Copy
+const nums = [1, 2, 3, 4];
+const nums2 = [5, 6, 7, 8];
+
+const jointNums = [...nums, ...nums2];
+console.log(jointNums);
+
+const student = {
+  Name: "Ahmad",
+  Class: "Xii",
+};
+
+const newClass = { ...student, City: "sagyoun" };
+console.log(newClass);
+
+// How both function works?
+function add() {
+  let arr = [...arguments[0]];
+  let result = arr.reduce(function (acc, curr) {
+    return acc + curr;
+  });
+  return result;
 }
 
-console.log(multiply(3, ""));
-// Note: callBack function override the undefined by it's own value in JavaScript.
-console.log(true + 0); // true = 1;
-console.log(false + 0); // false = 0;
-console.log("" + 1); // false = 0;
+console.log(add([2, 3, 4, 3, 5, 77]));
 
-// Setting Default value 6
-function randomNum(num = 6) {
-  return Math.floor(Math.random() * num) + 1; // 0.9
+// function 2
+function add() {
+  let arr = [arguments[0]]; // array inside array => [[2, 3, 4, 3, 5, 77]]
+  let result = arr.reduce(function (acc, curr) {
+    return acc + curr;
+  });
+  return result;
 }
 
-console.log(randomNum(10));
-
-// Default Parameter
-function DefaultFun(a, b = 5) {
-  // console.log(arguments);
-  return a * b;
-}
-
-console.log(DefaultFun(1));
+console.log(add([2, 3, 4, 3, 5, 77]));
