@@ -10,3 +10,11 @@ secElement.innerHTML = "<i>Ali</i>";
 const thirdElement = document.body.children[3];
 thirdElement.src =
   "https://plus.unsplash.com/premium_photo-1681488262364-8aeb1b6aac56?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8YW1hem9ufGVufDB8fDB8fHww";
+
+const img1 = document.getElementById("img1");
+img1.src =
+  "https://greggvanourek.com/wp-content/uploads/2023/08/Nature-path-by-water-trees-and-mountains-AdobeStock_291242770-768x463.jpeg";
+
+const img2 = document.getElementById("img2");
+img2.src =
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9PSg6yObKaXf3iS5D_--xBsONlxe7GP_XjA&s";
