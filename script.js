@@ -18,3 +18,5 @@ img1.src =
 const img2 = document.getElementById("img2");
 img2.src =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9PSg6yObKaXf3iS5D_--xBsONlxe7GP_XjA&s";
+
+console.log(document);
