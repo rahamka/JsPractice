@@ -1,33 +1,29 @@
-// How to interact with DOM?
-// What is BOM?
-// In JavaScript BOM is like a DOM BOM means [Browser Object Model] means representation of the Browser
+// // Problem 1
 
-function sum(a = 1, b, c) {
-  console.log(a);
-  return a + b + c;
+// let studentData = ["Ahmad", "Ali", "Wali", "Shoaib", "Nisar"];
+
+// function studentFun(allStudents, studentName) {
+//   studentName = studentName.toLowerCase();
+//   allStudents = [...allStudents];
+//   let finalVal = "";
+//   allStudents = allStudents.map((val) => val.toLowerCase());
+//   if (allStudents.includes(studentName)) {
+//     finalVal = "Found";
+//   } else {
+//     finalVal = "Not Found";
+//   }
+//   console.log(finalVal);
+// }
+
+// studentFun(studentData, "Wali");
+
+// Problem 2
+
+const groceries = ["bread", "milk", "eggs", "flour", "choose", "sugar"];
+let finalVal2 = "";
+finalVal2 = groceries.some((val) => val == "choose");
+if (finalVal2 == true) {
+  console.log("Found");
+} else {
+  console.log("Not Found");
 }
-
-console.log(sum(2, 2)); // NaN ?
-// why answer of this line of code is NaN? while i've declared the by default value to a parameter?
-
-function spreadOperator(a, b, ...c) {
-  return a + b + c.reduce((prev, curr) => prev + curr);
-}
-
-console.log(spreadOperator(1, 2, 3, 4, 5, 6));
-
-//
-let colors = ["red", "blue", "green"];
-const [red, blue, green] = colors;
-console.log(red);
-
-//
-let student = {
-  Name: "Ahmad",
-  Class: "Ix",
-  Age: 18,
-  isGraduate: false,
-};
-
-const { Name: userName, Class: userClass, Age: userAge, isGraduate } = student;
-console.log(userAge);
