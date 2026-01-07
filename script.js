@@ -5,8 +5,8 @@ const array = [
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeDdSE3L_R19t-nSQfjTcCSdaeuXg9gvSvHA&s",
 ];
 
-let img = document.getElementById("jbl");
-
+let img = document.getElementById("BoomBoxImage-Id");
+console.log("id = ", img.className);
 let imgPosition = 0;
 function updateImg() {
   imgPosition++;
@@ -20,3 +20,10 @@ img.src = array[0];
 setInterval(() => {
   updateImg();
 }, 1500);
+
+let el = document.querySelector("body img");
+let attr = el.getAttribute("id");
+console.log(attr);
+el.setAttribute("id", "Music");
+attr = el.getAttribute("id");
+console.log(attr);
