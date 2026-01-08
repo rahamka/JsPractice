@@ -1,29 +1,15 @@
-const array = [
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvimPzwOXCXDCFyo4gygMnyo_C3kJ6XoGCDQ&s",
-  "https://static.vecteezy.com/system/resources/thumbnails/006/240/296/small/idyllic-mountain-landscape-with-fresh-green-meadows-and-blooming-wildflowers-idyllic-nature-countryside-view-rural-outdoor-natural-view-idyllic-banner-nature-panoramic-spring-summer-scenery-photo.jpg",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBdzVS7jYCNzbYxaoXX-CjQEnNaf7ZKezsZA&s",
-  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeDdSE3L_R19t-nSQfjTcCSdaeuXg9gvSvHA&s",
-];
+let anchors = document.getElementsByTagName("a");
+let value = [...anchors];
+value.forEach((val) => {
+  val.style = `color: blue;
+  background-color: yellow;
+  border: 2px solid green;
+  `;
+  console.log(val.nodeType);
+});
 
-let img = document.getElementById("BoomBoxImage-Id");
-console.log("id = ", img.className);
-let imgPosition = 0;
-function updateImg() {
-  imgPosition++;
-  img.src = array[imgPosition];
-  if (imgPosition == array.length - 1) {
-    imgPosition = 0;
-  }
-}
+let heading = document.body.childNodes;
 
-img.src = array[0];
-setInterval(() => {
-  updateImg();
-}, 1500);
-
-let el = document.querySelector("body img");
-let attr = el.getAttribute("id");
-console.log(attr);
-el.setAttribute("id", "Music");
-attr = el.getAttribute("id");
-console.log(attr);
+heading.forEach((val) => {
+  console.log(val, val.nodeType);
+});
