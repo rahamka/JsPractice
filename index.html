@@ -13,24 +13,32 @@
         padding: 2rem;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         letter-spacing: 3px;
+        background-color: cadetblue;
       }
       .card {
-        height: 80px;
-        width: 80px;
-        border: 2px solid black;
+        height: 50px;
+        width: 50px;
+        border: 3px solid white;
+        border-radius: 10px;
         background-color: brown;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-weight: 600;
-        font-size: 1.4rem;
+        font-weight: 700;
+        font-size: 1rem;
+      }
+
+      #container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
       }
     </style>
   </head>
   <body>
-    <div class="card" id="card">Card</div>
-    <div class="div"></div>
-    <!-- Hello -->
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" class="card" id="card">Main Card</div>
+    <div id="container"></div>
     <script src="script.js" id="script"></script>
   </body>
 </html>
