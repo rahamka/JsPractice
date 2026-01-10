@@ -7,22 +7,39 @@
     <title>Frontend Roadmap</title>
     <link rel="shortcut icon" href="JsFavicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" id="script" defer></script>
     <style>
       body {
         color: black;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        /* letter-spacing: 1px; */
-        background-color: #6b8092;
-      }
-      h2 {
+        background-color: #003869;
+        color: #fff;
         font-weight: 600;
+      }
+      #container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: center;
+      }
+
+      .newContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem;
+        border: 1px solid #fff;
+      }
+
+      #id-1:active {
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div id="container">
-      <h2>This is simple body Paragraph.</h2>
-    </div>
-    <script src="script.js" id="script"></script>
+    <img id="card" />
+    <div id="container" onclick=""></div>
   </body>
 </html>
