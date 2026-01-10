@@ -16,30 +16,20 @@
         color: #fff;
         font-weight: 600;
       }
-      #container {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: center;
-      }
-
-      .newContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        margin: 1rem;
-        border: 1px solid #fff;
-      }
-
-      #id-1:active {
-        cursor: pointer;
+      input::placeholder {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <img id="card" />
-    <div id="container" onclick=""></div>
+    <h1>Form Events and Event Object</h1>
+    <label for="username"
+      >username:
+      <input
+        type="text"
+        name=""
+        id="username"
+        placeholder="Enter your name: " />
+    </label>
   </body>
 </html>
